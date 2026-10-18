@@ -16,12 +16,6 @@ export const status = [
 	{ label: 'Open to', value: 'Data science internships' },
 ];
 
-export const stats = [
-	{ value: '4,000+', label: 'personnel records validated' },
-	{ value: '90%', label: 'automated eligibility accuracy' },
-	{ value: '500+', label: 'aircraft per pipeline run' },
-];
-
 export type Credit = {
 	file: string;
 	title: string;

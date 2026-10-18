@@ -225,30 +225,9 @@
 	overflow-wrap: anywhere;
 }
 
-.stats {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	margin: 0;
-}
-
-.stats > div {
-	display: flex;
-	flex-direction: column;
-}
-
-.stats dd {
-	margin: 0;
-	font-family: var(--font-heading);
-	font-weight: 600;
-	font-size: 30px;
-	line-height: 1;
-	color: #0d5fa8;
-}
-
-.stats dt {
-	font-size: 13px;
-	color: var(--ink-soft);
+:global(.window) .playerBody {
+	padding: 6px;
+	background: #10141b;
 }
 
 .toolbox {

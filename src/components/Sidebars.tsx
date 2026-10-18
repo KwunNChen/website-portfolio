@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { site, stats, status } from '@/content/site';
+import { site, status } from '@/content/site';
 import { skillGroups } from '@/content/experience';
+import { MediaPlayer } from './MediaPlayer';
 import { Win7Window } from './Win7Window';
 import styles from './Shell.module.css';
 
@@ -49,16 +50,9 @@ export function LeftSidebar() {
 
 export function RightSidebar() {
 	return (
-		<aside className={styles.side} aria-label="Numbers and toolbox">
-			<Win7Window title="By the numbers" as="div">
-				<dl className={styles.stats}>
-					{stats.map((s) => (
-						<div key={s.label}>
-							<dd>{s.value}</dd>
-							<dt>{s.label}</dt>
-						</div>
-					))}
-				</dl>
+		<aside className={styles.side} aria-label="Music and toolbox">
+			<Win7Window title="Media Player" as="div" padded={false} bodyClassName={styles.playerBody}>
+				<MediaPlayer />
 			</Win7Window>
 			<Win7Window title="Toolbox" as="div">
 				<div className={styles.toolbox}>

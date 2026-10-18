@@ -21,6 +21,7 @@ Then open http://localhost:3000. `npm run build` makes a production build, and `
 | Jobs, open source and skills | `src/content/experience.ts` |
 | Name, status, stats, links and picture credits | `src/content/site.ts` |
 | The carousel's cards, photos and spin settings | `src/content/carousel.ts` |
+| The media player's songs (a snapshot of my Spotify playlist) | `src/content/playlist.ts` |
 | Carousel spin physics | `src/lib/spinEngine.ts` |
 | Mic "shhh" detection (runs in the browser; audio is never recorded or sent) | `src/lib/shushDetector.ts` |
 | Windows 7 window wrapper | `src/components/Win7Window.tsx` |
@@ -37,6 +38,12 @@ Everything about `data_is_loud.exe` is in `src/content/carousel.ts`:
 - **Photos:** put the file in `public/images/carousel/` and set `image.src`. Any size works because it's cropped to fit. Use `image.position` (for example `'center 30%'`) to choose which part shows. Leave `image` out for a plain colour band.
 - **Credits:** if a photo isn't yours, fill in `credit` and it's listed in the footer automatically.
 - **Feel:** `carouselSettings` sets the top speed, how quickly holding or shushing slows it, how snappy the landing is, and how much motion blur it has.
+
+## The media player
+
+The right sidebar has a Windows 7 Media Player–style window that shuffles my Spotify playlist "Study but lyrics". The songs are a snapshot in `src/content/playlist.ts`, one per line, so there are no API keys to manage. To add a song, copy its Spotify link (Share → Copy song link) and add a line with the id from the link, the title and the artist.
+
+Playback goes through Spotify's official embed, which loads only after a visitor presses play. Visitors logged in to Spotify hear full songs; everyone else hears 30-second previews, and the player moves on to the next shuffled song when one ends.
 
 ## Deploying
 

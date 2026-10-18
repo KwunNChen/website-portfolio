@@ -1,0 +1,373 @@
+/* Windows Media Player 12 "Now Playing" skin: black glass, blue glow, a glossy round play button */
+
+.player {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+	border-radius: 4px;
+	background:
+		linear-gradient(180deg, rgba(120, 170, 220, 0.18) 0%, rgba(120, 170, 220, 0) 22%),
+		linear-gradient(180deg, #1c2330 0%, #0b0f16 55%, #05070b 100%);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.25),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+	color: #e6f1ff;
+}
+
+.mode {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 8px;
+	font-size: 13px;
+	color: #9fc4e8;
+}
+
+.mode span {
+	font-weight: 700;
+	color: #dceeff;
+	white-space: nowrap;
+}
+
+.mode a {
+	color: #8fd0ff;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* Cover art, with the WMP-style floor reflection */
+.screen {
+	position: relative;
+	aspect-ratio: 1;
+	border-radius: 3px;
+	overflow: hidden;
+	background: #000;
+	box-shadow:
+		0 0 0 1px rgba(255, 255, 255, 0.12),
+		0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+.art {
+	object-fit: cover;
+}
+
+.screen::after {
+	content: '';
+	position: absolute;
+	inset: 0 0 55% 0;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+	pointer-events: none;
+}
+
+.noArt {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	font-size: 64px;
+	color: #3d6c9e;
+}
+
+.info {
+	min-width: 0;
+}
+
+.title,
+.artist {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+.artist {
+	font-size: 13px;
+	color: #9fc4e8;
+}
+
+/* ---------- Seek bar ---------- */
+
+.seek {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.seek input[type='range'] {
+	--fill: 0%;
+	appearance: none;
+	padding: 0;
+	width: 100%;
+	height: 6px;
+	margin: 4px 0;
+	border-radius: 3px;
+	background:
+		linear-gradient(90deg, #4fc3ff 0%, #1f7fd6 var(--fill), transparent var(--fill)),
+		linear-gradient(180deg, #2a2f38, #12151b);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+
+.seek input[type='range']:disabled {
+	cursor: default;
+}
+
+/* 7.css draws its own Win7 slider; this one is WMP's thin glowing bar instead */
+.seek input[type='range']::-webkit-slider-runnable-track {
+	height: 6px;
+	background: transparent;
+	box-shadow: none;
+}
+
+.seek input[type='range']::-moz-range-track {
+	height: 6px;
+	background: transparent;
+	box-shadow: none;
+}
+
+.seek input[type='range']::-webkit-slider-thumb {
+	appearance: none;
+	transform: translateY(-3px);
+	filter: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: radial-gradient(circle at 40% 35%, #ffffff, #9fd6ff 45%, #2a7fc8);
+	box-shadow: 0 0 6px rgba(79, 195, 255, 0.9);
+}
+
+.seek input[type='range']::-moz-range-thumb {
+	filter: none;
+	width: 12px;
+	height: 12px;
+	border: none;
+	border-radius: 50%;
+	background: radial-gradient(circle at 40% 35%, #ffffff, #9fd6ff 45%, #2a7fc8);
+	box-shadow: 0 0 6px rgba(79, 195, 255, 0.9);
+}
+
+.times {
+	align-self: flex-end;
+	font-size: 12px;
+	color: #7fa9d1;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Transport bar ---------- */
+
+.transport {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 6px 4px;
+	border-radius: 24px;
+	background: linear-gradient(180deg, #3d434e 0%, #1a1e25 48%, #07090c 52%, #1b1f27 100%);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.25),
+		0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.transport button,
+.transport button:not(:disabled):not(:hover) {
+	border-color: #000;
+}
+
+.transport button {
+	display: grid;
+	place-items: center;
+	min-width: 0;
+	min-height: 0;
+	padding: 0;
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+	color: #fff;
+	animation: none;
+	transition: filter 0.15s;
+}
+
+.transport button::before,
+.transport button::after {
+	content: none;
+}
+
+.transport button:hover {
+	filter: brightness(1.25);
+}
+
+.transport svg {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2.2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.small {
+	width: 30px;
+	height: 30px;
+	background: linear-gradient(180deg, #4a515d 0%, #22262e 50%, #0e1014 51%, #2a2f38 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+span.small {
+	visibility: hidden;
+}
+
+.small svg {
+	width: 16px;
+	height: 16px;
+	color: #6fd0ff;
+}
+
+.skip {
+	width: 34px;
+	height: 34px;
+	background: linear-gradient(180deg, #59616e 0%, #262a32 50%, #0f1115 51%, #30353f 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.skip svg {
+	width: 16px;
+	height: 16px;
+}
+
+.skip svg path:last-child,
+.orb svg path {
+	fill: currentColor;
+}
+
+/* The big blue glass orb */
+.orb {
+	width: 48px;
+	height: 48px;
+	background:
+		radial-gradient(ellipse 70% 45% at 50% 22%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+		radial-gradient(circle at 50% 75%, #6fd6ff 0%, #2a8be0 40%, #0d4a96 75%, #062a5c 100%);
+	box-shadow:
+		inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+		0 0 10px rgba(60, 170, 255, 0.55);
+}
+
+.orb svg {
+	width: 22px;
+	height: 22px;
+	filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
+}
+
+.orb[aria-busy='true'] {
+	filter: saturate(0.6) brightness(0.9);
+}
+
+.transport button:focus-visible {
+	outline: 2px solid #8fd0ff;
+	outline-offset: 2px;
+}
+
+/* ---------- Spotify embed + notes ---------- */
+
+.embed {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.embed[data-status='idle'] {
+	display: none;
+}
+
+.embed iframe {
+	display: block;
+	border: 0;
+}
+
+.note {
+	font-size: 13px;
+	color: #9fc4e8;
+}
+
+.note a {
+	color: #8fd0ff;
+}
+
+/* ---------- Up next ---------- */
+
+.queue {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 8px;
+	border-radius: 3px;
+	background: #000;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.queueHead {
+	font-size: 12px;
+	font-weight: 700;
+	color: #7fa9d1;
+}
+
+.queue ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.queue li button {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	min-width: 0;
+	min-height: 0;
+	padding: 4px 6px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	background: none;
+	box-shadow: none;
+	text-align: left;
+	color: inherit;
+	cursor: pointer;
+	animation: none;
+}
+
+.queue li button::before,
+.queue li button::after {
+	content: none;
+}
+
+.queue li button:not(:disabled):not(:hover) {
+	border-color: transparent;
+}
+
+.queue li button:not(:disabled):hover,
+.queue li button:focus-visible {
+	border-color: #1f5f99;
+	background: #0b2238;
+	outline: none;
+}
+
+.queueTitle,
+.queueArtist {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.queueTitle {
+	font-size: 13px;
+	color: #6be36b;
+}
+
+.queueArtist {
+	font-size: 12px;
+	color: #7fa9d1;
+}
