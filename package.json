@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "song-stats": "node scripts/song-stats.mjs"
   },
   "dependencies": {
     "7.css": "^0.21.1",

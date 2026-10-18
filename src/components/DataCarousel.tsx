@@ -148,8 +148,8 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 					: settled
 						? 'Data is clean and steady. Pick another with Previous and Next, or let it get loud again.'
 						: micAvailable
-							? 'Data is loud. Hold the button, press and hold the ring, or shush it with your mic to slow down the carousel and transform the data.'
-							: 'Data is loud. Hold the button (or press and hold the ring) to slow down the carousel and transform the data.'}
+							? 'Data is loud and messy. Hold the button, press and hold the ring, or shush it with your mic to slow down the carousel and transform the data.'
+							: 'Data is loud and messy. Hold the button (or press and hold the ring) to slow down the carousel and transform the data.'}
 			</p>
 
 			<div
@@ -218,9 +218,9 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 					>
 						{mode === 'calming' || mode === 'snapping'
 							? micReport.active
-								? 'Calming…'
+								? 'Filtering and shushing...'
 								: 'Keep holding…'
-							: 'Hold to calm the data'}
+							: 'Hold to transform and clena the data'}
 					</button>
 				)}
 				{settled && (

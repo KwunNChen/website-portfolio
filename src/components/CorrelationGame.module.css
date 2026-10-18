@@ -1,0 +1,158 @@
+/* Sized for the 240px sidebar */
+
+.game {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 14px;
+	line-height: 1.45;
+}
+
+.intro {
+	font-size: 13px;
+	color: var(--ink-soft);
+}
+
+/* ---------- Scatter plot ---------- */
+
+.figure {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.chart,
+.chartLoading {
+	display: block;
+	width: 100%;
+	max-width: 260px;
+	aspect-ratio: 210 / 196;
+	border: 1px solid #8fb2d0;
+	border-radius: 3px;
+	background: #fff;
+}
+
+.chartLoading {
+	background: linear-gradient(#fbfdff, #eef5fb);
+}
+
+.plotBg {
+	fill: #f4f9fd;
+}
+
+.grid {
+	stroke: #d6e6f3;
+	stroke-width: 1;
+}
+
+.tick {
+	font: 12px var(--font-ui);
+	fill: var(--ink-soft);
+	font-variant-numeric: tabular-nums;
+}
+
+.axisLabel {
+	font: 600 12.5px var(--font-ui);
+	fill: #2a5b8a;
+}
+
+.dot circle:last-child {
+	fill: #2f86d6;
+	stroke: #fff;
+	stroke-width: 1.2;
+	transition: fill 0.15s;
+}
+
+.dot:hover circle:last-child,
+.dot[data-picked] circle:last-child {
+	fill: #e8731a;
+}
+
+.hit {
+	fill: transparent;
+	cursor: pointer;
+}
+
+.fit {
+	stroke: #2e9e3e;
+	stroke-width: 2;
+	stroke-linecap: round;
+}
+
+.caption {
+	min-height: 2.9em;
+	font-size: 12px;
+	color: var(--ink-soft);
+}
+
+.caption b {
+	color: var(--ink);
+}
+
+/* ---------- Guess ---------- */
+
+.controls {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.guessLabel {
+	font-weight: 600;
+	font-variant-numeric: tabular-nums;
+}
+
+.sliderRow {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	color: var(--ink-soft);
+}
+
+.sliderRow input {
+	flex: 1;
+	min-width: 0;
+}
+
+.controls button {
+	width: 100%;
+	min-height: 30px;
+	font-size: 14px;
+}
+
+/* ---------- Result and score ---------- */
+
+.result {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 8px 10px;
+	border: 1px solid #c5dcef;
+	border-radius: 4px;
+	background: #f4f9fd;
+	font-size: 13px;
+}
+
+.resultHead {
+	font-weight: 700;
+	color: #0d4a86;
+	font-variant-numeric: tabular-nums;
+}
+
+.waiting {
+	color: var(--ink-soft);
+}
+
+.score {
+	font-size: 12px;
+	font-weight: 600;
+	color: #2a5b8a;
+	font-variant-numeric: tabular-nums;
+}
+
+.source {
+	font-size: 12px;
+	color: var(--ink-soft);
+}

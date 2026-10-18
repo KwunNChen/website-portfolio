@@ -47,6 +47,16 @@ The right sidebar has a Windows 7 Media Player–style window that shuffles my S
 
 Playback goes through Spotify's official embed, which loads only after a visitor presses play. Visitors logged in to Spotify hear full songs; everyone else hears 30-second previews, and the player moves on to the next shuffled song when one ends.
 
+## The correlation game
+
+`correlation.exe` on the home page plots 30 random songs from the playlist against two measures (energy, tempo, loudness, release year, popularity and so on) and asks visitors to guess the correlation. The numbers live in `src/content/songStats.ts`. After adding songs to `playlist.ts`, refresh them with:
+
+```bash
+npm run song-stats
+```
+
+It looks songs up on ReccoBeats (audio features) and Deezer (release year, popularity), both free with no keys. Songs neither service knows are left out of the game.
+
 ## Deploying
 
 The site is a standard Next.js app hosted on Vercel at [kwunchen.com](https://kwunchen.com/). Every push to `main` deploys it, and other branches get preview links. Link previews use the production domain automatically; set `NEXT_PUBLIC_SITE_URL` only to override it.

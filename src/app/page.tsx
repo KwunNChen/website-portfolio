@@ -13,14 +13,14 @@ export default function Home() {
 		<>
 			<Win7Window title="welcome.txt">
 				<div className="stack">
-					<h1 className={styles.hello}>Hi hi! I'm Kwun/Eric Chen.</h1>
+					<h1 className={styles.hello}>Hi! I’m Kwun/Eric Chen.</h1>
 					<p className={styles.pitch}>
-						Data usually shows up loud and messy. My job is calming it down until someone can make a decision with it.
+						I like messing with data, building pipelines, and making inferences. 
 					</p>
 					<p className={styles.lede}>
 						I study Data Science and Statistics at UC Berkeley (Public Policy minor, class of 2029). This past summer I
-						was at Air Combat Command building data pipelines for Air Force leadership, and these days I do data
-						engineering for Anyscale.
+						was at Air Combat Command building data pipelines for Air Force leadership, and these days I do open-source projects for the broader
+						Roblox developer community, open-science research, and data engineering consulting work at Anyscale.
 					</p>
 					<div className="btn-row">
 						<Link className="btn primary" href="/projects">

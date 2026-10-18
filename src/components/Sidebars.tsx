@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { site, status } from '@/content/site';
 import { skillGroups } from '@/content/experience';
+import { CorrelationGame } from './CorrelationGame';
 import { MediaPlayer } from './MediaPlayer';
 import { Win7Window } from './Win7Window';
 import styles from './Shell.module.css';
 
 export function LeftSidebar() {
 	return (
-		<aside className={styles.side} aria-label="Status and contact">
+		<aside className={styles.side} aria-label="Status, contact and correlation game">
 			<Win7Window title="Status" as="div">
 				<figure className={styles.photo}>
 					<Image
@@ -43,6 +44,9 @@ export function LeftSidebar() {
 					</a>
 					<p className={styles.small}>{site.email}</p>
 				</div>
+			</Win7Window>
+			<Win7Window title="correlation.exe" as="div">
+				<CorrelationGame />
 			</Win7Window>
 		</aside>
 	);

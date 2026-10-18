@@ -24,9 +24,9 @@ export const jobs: Job[] = [
 		],
 		tags: ['Polars', 'Python', 'Data pipelines'],
 		image: {
-			src: '/images/carousel/anyscale-rc-car.jpg',
+			src: '/images/carousel/anyscale-banner.jpg',
 			width: 720,
-			height: 482,
+			height: 288,
 			alt: 'A plush Elmo riding a self-driving toy car at an autonomous vehicle competition',
 		},
 	},
@@ -122,9 +122,9 @@ export const openSource: OpenSourceEntry[] = [
 		link: 'https://station-house.net/',
 		linkLabel: 'Project website',
 		image: {
-			src: '/images/stationhouse.jpg',
+			src: '/images/stationhouse-banner.jpg',
 			width: 1200,
-			height: 896,
+			height: 457,
 			alt: 'Painting of a steam train pulling into a brick country station, from the Stationhouse website',
 		},
 	},
