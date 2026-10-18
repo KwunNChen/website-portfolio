@@ -1,5 +1,7 @@
 # Kwun Chen · Portfolio
 
+**Live at [kwunchen.com](https://kwunchen.com/)**
+
 My data science portfolio, built as a Windows 7 desktop: a real sky photo for wallpaper, Aero glass windows from [7.css](https://khang-nd.github.io/7.css/), and three pages you move between with buttons instead of one long scroll.
 
 The home page has `data_is_loud.exe`, a carousel of my projects and jobs that spins too fast to read. Hold the button, press and hold the ring, or say a long "shhh" into your mic, and it calms down onto one card.
@@ -19,7 +21,7 @@ Then open http://localhost:3000. `npm run build` makes a production build, and `
 | --- | --- |
 | Projects, write-ups and their pictures | `src/content/projects.ts` |
 | Jobs, open source and skills | `src/content/experience.ts` |
-| Name, status, stats, links and picture credits | `src/content/site.ts` |
+| Name, status, links and picture credits | `src/content/site.ts` |
 | The carousel's cards, photos and spin settings | `src/content/carousel.ts` |
 | The media player's songs (a snapshot of my Spotify playlist) | `src/content/playlist.ts` |
 | Carousel spin physics | `src/lib/spinEngine.ts` |
@@ -47,7 +49,7 @@ Playback goes through Spotify's official embed, which loads only after a visitor
 
 ## Deploying
 
-The site is a standard Next.js app and deploys to Vercel as-is. Once it has a custom domain, set `NEXT_PUBLIC_SITE_URL` (for example `https://kwunchen.com`) so link previews use it.
+The site is a standard Next.js app hosted on Vercel at [kwunchen.com](https://kwunchen.com/). Every push to `main` deploys it, and other branches get preview links. Link previews use the production domain automatically; set `NEXT_PUBLIC_SITE_URL` only to override it.
 
 ## Picture credits
 
