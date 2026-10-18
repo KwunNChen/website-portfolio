@@ -108,13 +108,28 @@ export const openSource: OpenSourceEntry[] = [
 		summary:
 			'Seven server-authoritative Luau packages built on a modular client-server architecture. They share a state-management service that settles conflicting writes when packages are installed independently of each other.',
 		stack: ['Luau', 'Roblox'],
-		link: 'https://github.com/KwunNChen',
+		link: 'https://github.com/KwunNChen/Korblox-Builds',
 		linkLabel: 'See them on GitHub',
 		image: {
 			src: '/images/carousel/BSAR.png',
 			width: 692,
 			height: 478,
 			alt: 'Still from the demo video of the B.S.A.R. system in Roblox',
+			position: 'center 65%',
+		},
+	},
+	{
+		title: 'Stationhouse: Open-Science',
+		summary:
+			'Contributing on ConspiracyBench, evaluating efforts to make a model believe in conspiracies.',
+		stack: ['Python', 'Varying Python packages', 'Qwen models'],
+		link: 'https://station-house.net/',
+		linkLabel: 'Project website',
+		image: {
+			src: '/images/stationhouse.jpg',
+			width: 1200,
+			height: 896,
+			alt: 'Painting of a steam train pulling into a brick country station, from the Stationhouse website',
 			position: 'center 65%',
 		},
 	},
