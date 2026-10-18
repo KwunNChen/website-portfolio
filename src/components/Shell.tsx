@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Suspense, type ReactNode } from 'react';
 import { carouselItems } from '@/content/carousel';
 import { credits, site } from '@/content/site';
@@ -26,9 +25,15 @@ export function Shell({ children }: { children: ReactNode }) {
 				bodyClassName={styles.headerBody}
 			>
 				<div className={styles.brand}>
-					<Link href="/" className={styles.siteName}>
+					<a
+						href={site.linkedin}
+						className={styles.siteName}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`${site.name} on LinkedIn`}
+					>
 						{site.name}
-					</Link>
+					</a>
 					<p className={styles.tagline}>
 						Data Science + Statistics at UC Berkeley. I build pipelines that make noisy data usable.
 					</p>

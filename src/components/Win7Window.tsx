@@ -15,7 +15,7 @@ type Props = {
 	labelledBy?: string;
 };
 
-/** A Windows 7 window from 7.css. The title-bar controls are decoration only, so they're hidden from assistive tech. */
+/** A Windows 7 window from 7.css. The title-bar controls are decoration only: hidden from assistive tech and unclickable (see globals.css). */
 export function Win7Window({
 	title,
 	children,

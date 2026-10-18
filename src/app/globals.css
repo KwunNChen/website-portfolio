@@ -131,6 +131,11 @@ h3 {
 	font-weight: 600;
 }
 
+/* Minimize, maximize and close are decoration only, so they ignore the mouse (no hover glow, no click) */
+.title-bar-controls {
+	pointer-events: none;
+}
+
 .window-body.has-space {
 	padding: 16px 18px;
 }
