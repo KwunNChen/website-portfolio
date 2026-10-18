@@ -23,13 +23,12 @@ export default function ExperiencePage() {
 					<div className="stack">
 						{j.image && (
 							<Image
-								className={styles.banner}
+								className={styles.photo}
 								src={j.image.src}
 								width={j.image.width}
 								height={j.image.height}
 								alt={j.image.alt}
 								sizes="(max-width: 1080px) 100vw, 640px"
-								style={{ objectPosition: j.image.position }}
 							/>
 						)}
 						<div className={styles.cardHead}>
@@ -59,13 +58,12 @@ export default function ExperiencePage() {
 						<article key={o.title} className="stack">
 							{o.image && (
 								<Image
-									className={styles.banner}
+									className={styles.photo}
 									src={o.image.src}
 									width={o.image.width}
 									height={o.image.height}
 									alt={o.image.alt}
 									sizes="(max-width: 1080px) 100vw, 640px"
-									style={{ objectPosition: o.image.position }}
 								/>
 							)}
 							<h2 className={styles.cardTitle}>{o.title}</h2>

@@ -13,7 +13,7 @@ export default function Home() {
 		<>
 			<Win7Window title="welcome.txt">
 				<div className="stack">
-					<h1 className={styles.hello}>Hey, I’m Kwun.</h1>
+					<h1 className={styles.hello}>Hi hi! I'm Kwun/Eric Chen.</h1>
 					<p className={styles.pitch}>
 						Data usually shows up loud and messy. My job is calming it down until someone can make a decision with it.
 					</p>

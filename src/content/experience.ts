@@ -28,7 +28,6 @@ export const jobs: Job[] = [
 			width: 720,
 			height: 482,
 			alt: 'A plush Elmo riding a self-driving toy car at an autonomous vehicle competition',
-			position: 'center 60%',
 		},
 	},
 	{
@@ -61,11 +60,10 @@ export const jobs: Job[] = [
 		],
 		tags: ['Research', 'Qualitative coding', 'Product'],
 		image: {
-			src: '/images/carousel/sawyer-poster.jpg',
-			width: 1241,
+			src: '/images/carousel/sawyer.jpg',
+			width: 1236,
 			height: 825,
 			alt: 'Sawyer project poster with the team, research findings, design iterations and the final filtered water bottle',
-			position: 'center top',
 		},
 	},
 	{
@@ -82,7 +80,6 @@ export const jobs: Job[] = [
 			width: 3000,
 			height: 2250,
 			alt: 'Cadets of Air Force ROTC Detachment 085 at night with the Det 085 guidon and flags',
-			position: 'center 45%',
 		},
 	},
 ];
@@ -111,18 +108,17 @@ export const openSource: OpenSourceEntry[] = [
 		link: 'https://github.com/KwunNChen/Korblox-Builds',
 		linkLabel: 'See them on GitHub',
 		image: {
-			src: '/images/carousel/BSAR.png',
-			width: 692,
-			height: 478,
+			src: '/images/carousel/bsar-zoom.jpg',
+			width: 550,
+			height: 210,
 			alt: 'Still from the demo video of the B.S.A.R. system in Roblox',
-			position: 'center 65%',
 		},
 	},
 	{
 		title: 'Stationhouse: Open-Science',
 		summary:
 			'Contributing on ConspiracyBench, evaluating efforts to make a model believe in conspiracies.',
-		stack: ['Python', 'Varying Python packages', 'Qwen models'],
+		stack: ['Python', 'Varying Python packages','Varying AI models'],
 		link: 'https://station-house.net/',
 		linkLabel: 'Project website',
 		image: {
@@ -130,7 +126,6 @@ export const openSource: OpenSourceEntry[] = [
 			width: 1200,
 			height: 896,
 			alt: 'Painting of a steam train pulling into a brick country station, from the Stationhouse website',
-			position: 'center 65%',
 		},
 	},
 ];

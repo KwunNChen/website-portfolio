@@ -149,6 +149,7 @@ export function MediaPlayer() {
 					{playlist.name}
 				</a>
 			</p>
+			<p className={styles.note}>{playlist.about}</p>
 
 			<div className={styles.screen}>
 				{current.art ? (

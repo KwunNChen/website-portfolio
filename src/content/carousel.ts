@@ -90,7 +90,7 @@ export const carouselItems: CarouselItem[] = [
 			'Collected and coded 500+ customer reviews from 100+ websites in one week, then turned them into findings that shaped a consumer product prototype.',
 		href: '/experience',
 		linkLabel: 'Go to Experience',
-		image: { src: '/images/carousel/sawyer-poster.jpg', position: 'center top' },
+		image: { src: '/images/carousel/sawyer.jpg', position: 'center top' },
 	},
 	{
 		kind: 'Experience',
