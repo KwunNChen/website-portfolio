@@ -15,7 +15,7 @@ export default function Home() {
 				<div className="stack">
 					<h1 className={styles.hello}>Hi! I’m Kwun/Eric Chen.</h1>
 					<p className={styles.pitch}>
-						I like messing with data, building pipelines, and making inferences. 
+						I like messing with data, building pipelines, and absorbing things like a sponge. 
 					</p>
 					<p className={styles.lede}>
 						I study Data Science and Statistics at UC Berkeley (Public Policy minor, class of 2029). This past summer I

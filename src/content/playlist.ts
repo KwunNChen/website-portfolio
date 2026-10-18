@@ -16,7 +16,7 @@ export type Track = {
 	title: string;
 	artist: string;
 	durationMs?: number;
-	/** Cover image URL (Spotify's image CDN) */
+	/** Cover image URL (Spotify's or Deezer's image CDN) */
 	art?: string;
 };
 
@@ -24,7 +24,7 @@ export const playlist = {
 	name: 'Study but lyrics',
 	url: 'https://open.spotify.com/playlist/41gZByRiYjhkZxe7x7j2tC',
 	/** A line under the player's header */
-	about: 'My favorite artists are Radiohead, Tame Impala, Mac DeMarco and other indie artists.',
+	about: 'You have to be logged in to Spotify on browser to hear full songs; everyone else hears 30-second previews.',
 };
 
 // One song per line, so the list stays easy to edit
@@ -109,6 +109,6 @@ export const tracks: Track[] = [
 	{ id: "0eAuGrXyGFYwur9ARUe7LJ", title: "Earrings", artist: "Malcolm Todd", durationMs: 151500, art: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e022c1f34ecc1929fb59908aad1" },
 	{ id: "5v3Dv4UlDOGaXlvphFpkIX", title: "Hello Juliet", artist: "Clarion", durationMs: 208000, art: "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027c0a7f8d483d355d834e5cb1" },
 	{ id: "0u6SJZRhC1KSguPxLACkt9", title: "Спокойная ночь", artist: "Kino", durationMs: 382803, art: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02fc64e59813286b87ec9276b8" },
-	{ id: "3RmFPuTTAjSQ2pbEd2j9oA", title: "Loser", artist: "Tame Impala" },
-	{ id: "22NHkFYbgxB2Zirj29Gbp8", title: "oh yeah?", artist: "Steve Lacy" },
+	{ id: "3RmFPuTTAjSQ2pbEd2j9oA", title: "Loser", artist: "Tame Impala", durationMs: 223069, art: "https://cdn-images.dzcdn.net/images/cover/c1c347119545b167c97183055b86011e/250x250-000000-80-0-0.jpg" },
+	{ id: "22NHkFYbgxB2Zirj29Gbp8", title: "oh yeah?", artist: "Steve Lacy", durationMs: 170584, art: "https://cdn-images.dzcdn.net/images/cover/c64458bda012cdf305dc92a07626a51d/250x250-000000-80-0-0.jpg" },
 ];

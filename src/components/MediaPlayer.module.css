@@ -174,7 +174,11 @@
 		0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
+/* 7.css lights a button on hover and keeps a clicked (focused) one lit and pulsing. Here the buttons
+   keep their own colours in every state and only brighten while pressed. */
 .transport button,
+.transport button:focus,
+.transport button:not(:disabled):hover,
 .transport button:not(:disabled):not(:hover) {
 	border-color: #000;
 }
@@ -198,8 +202,8 @@
 	content: none;
 }
 
-.transport button:hover {
-	filter: brightness(1.25);
+.transport button:not(:disabled):active {
+	filter: brightness(1.35);
 }
 
 .transport svg {
@@ -210,11 +214,9 @@
 	stroke-linejoin: round;
 }
 
-.small {
+.transport .small {
 	width: 30px;
 	height: 30px;
-	background: linear-gradient(180deg, #4a515d 0%, #22262e 50%, #0e1014 51%, #2a2f38 100%);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 span.small {
@@ -227,11 +229,9 @@ span.small {
 	color: #6fd0ff;
 }
 
-.skip {
+.transport .skip {
 	width: 34px;
 	height: 34px;
-	background: linear-gradient(180deg, #59616e 0%, #262a32 50%, #0f1115 51%, #30353f 100%);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .skip svg {
@@ -245,15 +245,9 @@ span.small {
 }
 
 /* The big blue glass orb */
-.orb {
+.transport .orb {
 	width: 48px;
 	height: 48px;
-	background:
-		radial-gradient(ellipse 70% 45% at 50% 22%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
-		radial-gradient(circle at 50% 75%, #6fd6ff 0%, #2a8be0 40%, #0d4a96 75%, #062a5c 100%);
-	box-shadow:
-		inset 0 0 0 1px rgba(255, 255, 255, 0.35),
-		0 0 10px rgba(60, 170, 255, 0.55);
 }
 
 .orb svg {
@@ -266,6 +260,29 @@ span.small {
 	filter: saturate(0.6) brightness(0.9);
 }
 
+.transport button.small,
+.transport button.small:is(:hover, :focus) {
+	background: linear-gradient(180deg, #4a515d 0%, #22262e 50%, #0e1014 51%, #2a2f38 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.transport button.skip,
+.transport button.skip:is(:hover, :focus) {
+	background: linear-gradient(180deg, #59616e 0%, #262a32 50%, #0f1115 51%, #30353f 100%);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.transport button.orb,
+.transport button.orb:is(:hover, :focus) {
+	background:
+		radial-gradient(ellipse 70% 45% at 50% 22%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+		radial-gradient(circle at 50% 75%, #6fd6ff 0%, #2a8be0 40%, #0d4a96 75%, #062a5c 100%);
+	box-shadow:
+		inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+		0 0 10px rgba(60, 170, 255, 0.55);
+}
+
+/* Keyboard users still see where they are, as a ring rather than a lit button */
 .transport button:focus-visible {
 	outline: 2px solid #8fd0ff;
 	outline-offset: 2px;
@@ -343,15 +360,20 @@ span.small {
 	content: none;
 }
 
-.queue li button:not(:disabled):not(:hover) {
+.queue li button:not(:disabled):not(:hover),
+.queue li button:not(:disabled):hover {
 	border-color: transparent;
 }
 
-.queue li button:not(:disabled):hover,
-.queue li button:focus-visible {
+/* Like the transport buttons: lit only while pressed, a ring for keyboard focus */
+.queue li button:not(:disabled):active {
 	border-color: #1f5f99;
 	background: #0b2238;
-	outline: none;
+}
+
+.queue li button:focus-visible {
+	outline: 1px solid #8fd0ff;
+	outline-offset: -1px;
 }
 
 .queueTitle,
