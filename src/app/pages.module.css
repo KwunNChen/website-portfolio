@@ -1,0 +1,213 @@
+.hello {
+	font-size: clamp(34px, 5vw, 48px);
+	color: #0d4a86;
+}
+
+.pitch {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.35;
+	max-width: 40ch;
+}
+
+.lede {
+	max-width: 62ch;
+}
+
+.pageTitle {
+	font-size: clamp(30px, 4.5vw, 40px);
+	color: #0d4a86;
+}
+
+/* Project rows on the home page */
+.projectList {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.projectRow {
+	display: grid;
+	grid-template-columns: 200px minmax(0, 1fr);
+	gap: 14px;
+	align-items: start;
+	padding: 12px 14px;
+	border: 1px solid #c5dcef;
+	border-radius: 4px;
+	background: linear-gradient(#ffffff, #f1f7fd);
+}
+
+.thumb {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	border: 1px solid #8fb2d0;
+	border-radius: 3px;
+}
+
+.rowText {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 0;
+}
+
+@media (max-width: 640px) {
+	.projectRow {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+/* Wide picture at the top of a project window */
+.banner {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 21 / 8;
+	object-fit: cover;
+	border: 1px solid #8fb2d0;
+	border-radius: 3px;
+}
+
+.projectRow h2 {
+	font-size: 22px;
+}
+
+.projectRow h2 a {
+	color: #0b4f92;
+	text-decoration: none;
+}
+
+.projectRow h2 a:hover {
+	text-decoration: underline;
+}
+
+.rowHead {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 4px 12px;
+}
+
+/* Status badge, styled like a Win7 status-bar pane */
+.status {
+	padding: 1px 8px;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.complete {
+	background: #dff5d6;
+	border: 1px solid #8cc97a;
+	color: #255d1a;
+}
+
+.inProgress {
+	background: #dceefc;
+	border: 1px solid #86b9e3;
+	color: #134f86;
+}
+
+/* Experience summary, one row per job; wraps instead of truncating */
+.jobList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #c9d6e2;
+	border-radius: 3px;
+}
+
+.jobList li {
+	display: grid;
+	grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.3fr) auto;
+	gap: 4px 14px;
+	padding: 8px 12px;
+	font-size: 14px;
+}
+
+.jobList li + li {
+	border-top: 1px solid #e1e9f1;
+}
+
+.jobList li:nth-child(odd) {
+	background: #f6f9fc;
+}
+
+.jobOrg {
+	font-weight: 700;
+}
+
+.jobWhen {
+	color: var(--ink-soft);
+	white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+	.jobList li {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+/* Full project + job windows */
+.cardHead {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 6px 16px;
+}
+
+.cardTitle {
+	font-size: 28px;
+	color: #0d4a86;
+}
+
+.role {
+	font-weight: 700;
+}
+
+.dates {
+	font-weight: 600;
+	color: var(--ink-soft);
+	white-space: nowrap;
+}
+
+.bullets li,
+.steps li {
+	max-width: 68ch;
+}
+
+.bullets {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin: 0;
+	padding-left: 1.2em;
+}
+
+/* Write-up */
+.writeUp h2 {
+	font-size: 24px;
+	color: #0d4a86;
+	margin-top: 8px;
+}
+
+.steps {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0;
+	padding-left: 1.2em;
+}
+
+.steps strong {
+	color: #0d3a66;
+}

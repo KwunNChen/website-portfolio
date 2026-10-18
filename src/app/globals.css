@@ -1,0 +1,224 @@
+/*
+ * 7.css (Windows 7 UI kit) supplies windows, title bars and buttons.
+ * This file adds the wallpaper, the desktop layout and a few readable-size overrides.
+ */
+
+:root {
+	--sky-deep: #1b4f93;
+	--sky: #2f6fb8;
+	--ink: #10233a;
+	--ink-soft: #3b5168;
+	--link: #0b5cad;
+	--aero-hi: #e9f6ff;
+	--aero-mid: #9fd3f5;
+	--aero-lo: #3a95d6;
+	--aero-edge: #1d5f96;
+
+	--font-ui: 'Segoe UI', 'SegoeUI', var(--font-noto), 'Noto Sans', system-ui, sans-serif;
+	/* Headings: Aharoni where it's installed, otherwise Jost */
+	--font-heading: 'Aharoni', var(--font-jost), 'Segoe UI', sans-serif;
+
+	--w7-font: 16px var(--font-ui);
+	--gap: 14px;
+	--shell-max: 1180px;
+	--side: 240px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font: 16px/1.55 var(--font-ui);
+	color: var(--ink);
+	background: var(--sky-deep);
+}
+
+/* Real photo wallpaper. Fixed layer (not background-attachment) so it also holds still on iOS.
+   Slight scale crops the rooftops in the photo's bottom corners. */
+body::before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background: var(--sky-deep) url('/wallpaper/sky.jpg') center 35% / cover no-repeat;
+	background-image: image-set(
+		url('/wallpaper/sky-2560.webp') type('image/webp'),
+		url('/wallpaper/sky.jpg') type('image/jpeg')
+	);
+	transform: scale(1.08);
+	transform-origin: center top;
+}
+
+/* Phones and tablets don't need the 2560px photo */
+@media (max-width: 900px) {
+	body::before {
+		background-image: image-set(
+			url('/wallpaper/sky-1280.webp') type('image/webp'),
+			url('/wallpaper/sky.jpg') type('image/jpeg')
+		);
+	}
+}
+
+a {
+	color: var(--link);
+}
+
+/* Links inside running text are underlined, not just coloured */
+p a,
+li a {
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+p {
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: 0.01em;
+}
+
+:focus-visible {
+	outline: 2px solid #1e90ff;
+	outline-offset: 2px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* ---------- 7.css readability overrides ---------- */
+
+.window {
+	font: var(--w7-font);
+}
+
+.window-body {
+	font-size: 16px;
+	line-height: 1.55;
+}
+
+/* Comfortable line length inside wide windows */
+.window-body p {
+	max-width: 68ch;
+}
+
+.title-bar-text {
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.window-body.has-space {
+	padding: 16px 18px;
+}
+
+/* ---------- Link that looks like a Win7 push button ---------- */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-height: 30px;
+	padding: 4px 16px;
+	border: 1px solid var(--w7-el-bd);
+	border-radius: var(--w7-el-bdr);
+	background: var(--w7-el-grad);
+	box-shadow: var(--w7-el-sd);
+	color: #1b1b1b;
+	font: 600 14px/1.2 var(--font-ui);
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: border-color 0.2s;
+}
+
+.btn:hover {
+	border-color: var(--w7-el-bd-h);
+	background: var(--w7-el-grad-h);
+}
+
+.btn:active {
+	border-color: var(--w7-el-bd-a);
+	background: var(--w7-el-grad-a);
+	box-shadow: var(--w7-el-sd-a);
+}
+
+.btn:focus-visible {
+	outline: 1px dotted #000;
+	outline-offset: -4px;
+	box-shadow: inset 0 0 0 2px #98d1ef;
+}
+
+/* Default-button look (the one Windows highlights) */
+.btn.primary {
+	border-color: #3c7fb1;
+	background: var(--w7-el-grad-h);
+	box-shadow: inset 0 0 2px 1px #34deffaa;
+}
+
+.btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+/* ---------- Tag chips ---------- */
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tags li {
+	padding: 1px 8px;
+	border: 1px solid #a9c9e4;
+	border-radius: 3px;
+	background: linear-gradient(#fbfdff, #e4f0fa);
+	font-size: 13px;
+	color: #1d3b57;
+}
+
+/* ---------- Window content helpers ---------- */
+
+.muted {
+	color: var(--ink-soft);
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.window-heading {
+	font-size: 26px;
+	color: #0d4a86;
+}
