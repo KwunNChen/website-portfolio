@@ -1,3 +1,5 @@
+import type { Picture } from './projects';
+
 export type Job = {
 	org: string;
 	role: string;
@@ -7,6 +9,8 @@ export type Job = {
 	end?: string;
 	bullets: string[];
 	tags: string[];
+	/** Banner photo at the top of the job's window. Leave out for none. */
+	image?: Picture;
 };
 
 // Newest first
@@ -19,6 +23,13 @@ export const jobs: Job[] = [
 			'Building a config-driven Polars pipeline for an autonomous RC car platform. It logs multi-sensor data, cleans it, and loads it as analysis-ready data for GPU-based model training.',
 		],
 		tags: ['Polars', 'Python', 'Data pipelines'],
+		image: {
+			src: '/images/carousel/anyscale-rc-car.jpg',
+			width: 720,
+			height: 482,
+			alt: 'A plush Elmo riding a self-driving toy car at an autonomous vehicle competition',
+			position: 'center 60%',
+		},
 	},
 	{
 		org: 'Air Combat Command (U.S. Air Force)',
@@ -31,6 +42,12 @@ export const jobs: Job[] = [
 			'Designed a unified data model for senior enlisted personnel and proposed a talent-identification dashboard that combines readiness, PME and performance data.',
 		],
 		tags: ['ELT', 'Star schema', 'Power BI', 'Palantir'],
+		image: {
+			src: '/images/carousel/acc-briefing.jpg',
+			width: 1170,
+			height: 468,
+			alt: 'Kwun presenting a briefing at Air Combat Command in front of the U.S. and Air Force flags',
+		},
 	},
 	{
 		org: 'Sawyer',
@@ -43,6 +60,13 @@ export const jobs: Job[] = [
 			'Took part in a cross-functional review that narrowed 4 candidate prototype designs down to 1, using feedback from stakeholders outside the product team.',
 		],
 		tags: ['Research', 'Qualitative coding', 'Product'],
+		image: {
+			src: '/images/carousel/sawyer-poster.jpg',
+			width: 1241,
+			height: 825,
+			alt: 'Sawyer project poster with the team, research findings, design iterations and the final filtered water bottle',
+			position: 'center top',
+		},
 	},
 	{
 		org: 'Air Force ROTC Detachment 085',
@@ -53,6 +77,13 @@ export const jobs: Job[] = [
 			'Leading a team that deployed an LLM-powered chatbot on Cloudflare Workers, which gives 100+ cadets real-time answers.',
 		],
 		tags: ['scikit-learn', 'LLMs', 'Cloudflare Workers'],
+		image: {
+			src: '/images/carousel/nfm.png',
+			width: 3000,
+			height: 2250,
+			alt: 'Cadets of Air Force ROTC Detachment 085 at night with the Det 085 guidon and flags',
+			position: 'center 45%',
+		},
 	},
 ];
 
@@ -67,6 +98,7 @@ export type OpenSourceEntry = {
 	stack: string[];
 	link?: string;
 	linkLabel?: string;
+	image?: Picture;
 };
 
 // Online open source only for now; volunteering (IRL) gets its own list once there's content.
@@ -78,6 +110,13 @@ export const openSource: OpenSourceEntry[] = [
 		stack: ['Luau', 'Roblox'],
 		link: 'https://github.com/KwunNChen',
 		linkLabel: 'See them on GitHub',
+		image: {
+			src: '/images/carousel/BSAR.png',
+			width: 692,
+			height: 478,
+			alt: 'Still from the demo video of the B.S.A.R. system in Roblox',
+			position: 'center 65%',
+		},
 	},
 ];
 
@@ -88,14 +127,14 @@ export const skillGroups = [
 		items: [
 			'Machine learning',
 			'Classification',
+			'Bayesian modeling',
 			'Decision trees',
-			'Linear regression',
+			'Modeling Algorithms',
 			'Hypothesis testing',
 			'A/B testing',
 			'EDA',
 			'Time series',
-			'scikit-learn',
-			'pandas',
+			'polars',
 			'NumPy',
 			'Jupyter',
 		],

@@ -80,14 +80,7 @@ export const carouselItems: CarouselItem[] = [
 			'Built an ELT pipeline and star schema that fed a weekly Power BI readiness dashboard for ACC’s colonels and brigadier generals, plus an eligibility engine that reached 90% automated accuracy on 4,000+ records.',
 		href: '/experience',
 		linkLabel: 'Go to Experience',
-		image: { src: '/images/carousel/acc-headquarters.jpg', position: 'center 70%' },
-		credit: {
-			file: 'ACC headquarters',
-			title: 'Air Combat Command HQ',
-			creator: 'U.S. Air Force',
-			license: 'Public domain',
-			page: 'https://commons.wikimedia.org/wiki/File:Air_Combat_Command_HQ.jpg',
-		},
+		image: { src: '/images/carousel/acc-briefing.jpg' },
 	},
 	{
 		kind: 'Experience',
@@ -97,15 +90,7 @@ export const carouselItems: CarouselItem[] = [
 			'Collected and coded 500+ customer reviews from 100+ websites in one week, then turned them into findings that shaped a consumer product prototype.',
 		href: '/experience',
 		linkLabel: 'Go to Experience',
-		image: { src: '/images/carousel/sawyer-sticky-notes.jpg', position: 'center 55%' },
-		credit: {
-			file: 'Sticky notes',
-			title: 'Brainstorming Customer Feedback (1)',
-			creator: 'Steveonmz',
-			license: 'CC BY-SA 4.0',
-			licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
-			page: 'https://commons.wikimedia.org/w/index.php?curid=61093066',
-		},
+		image: { src: '/images/carousel/sawyer-poster.jpg', position: 'center top' },
 	},
 	{
 		kind: 'Experience',
@@ -115,14 +100,7 @@ export const carouselItems: CarouselItem[] = [
 			'Trained scikit-learn models on cadet performance data to find training gaps, and leading a team that deployed an LLM chatbot on Cloudflare Workers for 100+ cadets.',
 		href: '/experience',
 		linkLabel: 'Go to Experience',
-		image: { src: '/images/carousel/afrotc-cadets.jpg', position: 'center 40%' },
-		credit: {
-			file: 'ROTC cadets',
-			title: 'Senior NCOs from Los Angeles Air Force Base instruct Loyola Marymount ROTC cadets',
-			creator: 'Tech. Sgt. Sarah Corrice, U.S. Air Force',
-			license: 'Public domain',
-			page: 'https://commons.wikimedia.org/wiki/File:Senior_NCOs_from_Los_Angeles_Air_Force_Base_instruct_Loyola_Marymount_ROTC_cadets_(1826992).jpg',
-		},
+		image: { src: '/images/carousel/nfm.png', position: 'center 45%' },
 	},
 	{
 		kind: 'Open source',
@@ -132,15 +110,7 @@ export const carouselItems: CarouselItem[] = [
 			'Seven server-authoritative Luau packages that share a state-management service, so they can be installed independently without fighting over the same data.',
 		href: '/experience',
 		linkLabel: 'Go to Experience',
-		image: { src: '/images/carousel/roblox-building-blocks.jpg' },
-		credit: {
-			file: 'Building blocks',
-			title: 'Building Blocks',
-			creator: 'Holger Zscheyge',
-			license: 'CC BY 2.0',
-			licenseUrl: 'https://creativecommons.org/licenses/by/2.0/',
-			page: 'https://www.flickr.com/photos/49741083@N00/49012397',
-		},
+		image: { src: '/images/carousel/BSAR.png', position: 'center 65%' },
 	},
 ];
 

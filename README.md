@@ -60,9 +60,5 @@ All pictures come from Wikimedia Commons or Flickr under open licences, and are 
 - "E-ticker" by klip game, public domain
 - "20200311 F-15 Eagle formation-Kadena AB-15" by Balon Greyjoy, CC0
 - "Autonomous Vehicle Competition 2010" by SparkFun Electronics, CC BY 2.0 (Flickr)
-- "Air Combat Command HQ" by the U.S. Air Force, public domain
-- "Brainstorming Customer Feedback (1)" by Steveonmz, CC BY-SA 4.0
-- "Senior NCOs from Los Angeles Air Force Base instruct Loyola Marymount ROTC cadets" by Tech. Sgt. Sarah Corrice, U.S. Air Force, public domain
-- "Building Blocks" by Holger Zscheyge, CC BY 2.0 (Flickr)
 
 Windows 7 styling by [7.css](https://github.com/khang-nd/7.css) (MIT).

@@ -34,9 +34,6 @@ export function Shell({ children }: { children: ReactNode }) {
 					>
 						{site.name}
 					</a>
-					<p className={styles.tagline}>
-						Data Science + Statistics at UC Berkeley. I build pipelines that make noisy data usable.
-					</p>
 				</div>
 				<Suspense fallback={<NavBarFallback />}>
 					<NavBar />

@@ -77,7 +77,7 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 		}
 	}, [mode]);
 
-	// The mic is only on while there's something to calm: it switches off once a signal is found
+	// The mic is only on while there's something to calm: it switches off once a clean data is found
 	useEffect(() => {
 		if (mode === 'settled') stopMic();
 	}, [mode]);
@@ -146,10 +146,10 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 				{reducedMotion
 					? 'Motion is reduced on your device, so the data starts calm. Use Previous and Next to look around.'
 					: settled
-						? 'Calm. Pick another with Previous and Next, or let it get loud again.'
+						? 'Data is clean and steady. Pick another with Previous and Next, or let it get loud again.'
 						: micAvailable
-							? 'Data is loud. Hold the button, press and hold the ring, or shush it with your mic until a signal comes through.'
-							: 'Data is loud. Hold the button (or press and hold the ring) to calm it down until a signal comes through.'}
+							? 'Data is loud. Hold the button, press and hold the ring, or shush it with your mic to slow down the carousel and transform the data.'
+							: 'Data is loud. Hold the button (or press and hold the ring) to slow down the carousel and transform the data.'}
 			</p>
 
 			<div
@@ -292,7 +292,7 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 			<div className={styles.result} aria-live="polite">
 				{settled && current ? (
 					<>
-						<p className={styles.resultKind}>Signal found: {current.kind}</p>
+						<p className={styles.resultKind}>Data cleaned and stable: {current.kind}</p>
 						<p className={styles.resultTitle}>{current.title}</p>
 						<p>{current.detail}</p>
 						<Link ref={openRef} className="btn primary" href={current.href}>
@@ -300,7 +300,7 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 						</Link>
 					</>
 				) : (
-					<p className={styles.resultWaiting}>No signal yet: everything is still noise.</p>
+					<p className={styles.resultWaiting}>Data is still unclean and loud.</p>
 				)}
 			</div>
 

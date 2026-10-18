@@ -1,8 +1,8 @@
 export const site = {
-	name: 'Kwun Chen',
-	title: 'Kwun Chen | Data Science',
+	name: 'Kwun N Chen',
+	title: 'Kwun "Eric" Chen | Data Science',
 	description:
-		'Kwun Chen studies Data Science and Statistics at UC Berkeley and builds data pipelines, models and dashboards.',
+		'Kwun "Eric" Chen studies Data Science and Statistics at UC Berkeley and builds data pipelines, models and dashboards.',
 	email: 'datasciduud@berkeley.edu',
 	github: 'https://github.com/KwunNChen',
 	linkedin: 'https://www.linkedin.com/in/kwunchen/',
@@ -10,10 +10,10 @@ export const site = {
 };
 
 export const status = [
-	{ label: 'Doing', value: 'Data engineering at Anyscale' },
+	{ label: 'Doing', value: 'Data Engineering consultant at Anyscale' },
 	{ label: 'Studying', value: 'Data Science + Statistics, UC Berkeley ’29' },
 	{ label: 'Building', value: 'Slack the Tape' },
-	{ label: 'Open to', value: 'Data science internships' },
+	{ label: 'Open to', value: 'Data science & ML internships' },
 ];
 
 export type Credit = {

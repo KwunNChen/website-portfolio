@@ -62,15 +62,6 @@
 	text-underline-offset: 6px;
 }
 
-.brand .tagline {
-	color: #fff;
-	font-size: 16px;
-	font-weight: 600;
-	text-shadow: 0 1px 3px rgba(5, 30, 70, 0.8);
-	max-width: 34ch;
-	text-wrap: balance;
-}
-
 /* ---------- Aero nav buttons ---------- */
 
 .navBar {
