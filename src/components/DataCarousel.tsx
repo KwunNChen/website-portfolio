@@ -220,7 +220,7 @@ export function DataCarousel({ items }: { items: CarouselItem[] }) {
 							? micReport.active
 								? 'Filtering and shushing...'
 								: 'Keep holding…'
-							: 'Hold to transform and clena the data'}
+							: 'Hold to transform and clean the data'}
 					</button>
 				)}
 				{settled && (
