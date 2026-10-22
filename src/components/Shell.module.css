@@ -1,4 +1,7 @@
 .desktop {
+	/* Above the fixed sky wallpaper (body::before in globals.css) */
+	position: relative;
+	z-index: 1;
 	max-width: calc(var(--shell-max) + 32px);
 	margin: 0 auto;
 	padding: 20px 16px 28px;

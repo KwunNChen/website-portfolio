@@ -43,12 +43,15 @@ body {
 }
 
 /* Real photo wallpaper. Fixed layer (not background-attachment) so it also holds still on iOS.
-   Slight scale crops the rooftops in the photo's bottom corners. */
+   Slight scale crops the rooftops in the photo's bottom corners.
+   It sits above the page backgrounds (z-index 0) and below the content (.desktop, z-index 1). Behind the page
+   (z-index -1) it disappeared whenever something gave <html> a background, as dark-mode extensions do. */
 body::before {
 	content: '';
 	position: fixed;
 	inset: 0;
-	z-index: -1;
+	z-index: 0;
+	pointer-events: none;
 	background: var(--sky-deep) url('/wallpaper/sky.jpg') center 35% / cover no-repeat;
 	background-image: image-set(
 		url('/wallpaper/sky-2560.webp') type('image/webp'),
