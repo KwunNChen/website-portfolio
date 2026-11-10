@@ -165,8 +165,9 @@
 			'left'
 			'right';
 	}
+	/* Four buttons don't fit one row on a phone, so two rows of two */
 	.navBtn {
-		flex: 1 1 0;
+		flex: 1 1 calc(50% - 4px);
 		min-width: 0;
 		padding: 8px 6px;
 	}

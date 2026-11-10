@@ -10,6 +10,13 @@ const pages = [
 	{ href: '/experience', label: 'Experience' },
 ];
 
+// A file, not a page, so a plain link that opens it in a new tab
+const resume = (
+	<a href="/Kwun_Resume.pdf" className={styles.navBtn} target="_blank" rel="noopener noreferrer">
+		Resume
+	</a>
+);
+
 export function NavBar() {
 	const pathname = usePathname();
 	const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
@@ -21,6 +28,7 @@ export function NavBar() {
 					{p.label}
 				</Link>
 			))}
+			{resume}
 		</nav>
 	);
 }
@@ -34,6 +42,7 @@ export function NavBarFallback() {
 					{p.label}
 				</Link>
 			))}
+			{resume}
 		</nav>
 	);
 }
